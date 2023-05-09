@@ -1,0 +1,20 @@
+{
+  "name": "Minimal Twitter",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "Remove superfluous items from the Twitter navigation.",
+  "permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.twitter.com/*",
+        "https://*.twitter.com/*"
+        ],
+      "js":["content.js"]
+    }
+  ]
+}
