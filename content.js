@@ -27,7 +27,6 @@ var leftNavExists = setInterval(function() {
 miscItemsToHide.forEach(function(miscItem) {
   var interval = setInterval(function() {
     miscItem.labels.forEach(function(label) {
-      console.log("looking for label: ", label);
       items = document.querySelectorAll(`${miscItem.selector}[aria-label="${label}"]`)
       if (items.length > 0) {
         items[0].remove();
